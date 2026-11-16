@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Read customer reviews and share your experience at Brew & Bean cafe.">
+
+    <title>Brew & Bean | Customer Reviews</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ===========================
+     NAVBAR
+=========================== -->
+
+<header class="site-header">
+
+    <nav class="navbar" aria-label="Main navigation">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">☕</span>
+            BREW & BEAN
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">Our Story</a>
+            <a href="menu.html">Menu</a>
+            <a href="offers.html">Offers</a>
+            <a href="reviews.html"
+               class="active"
+               aria-current="page">Reviews</a>
+            <a href="rewards.html">Rewards</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+
+        <a href="login.html" class="visit-btn">
+            Login
+        </a>
+
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- ===========================
+         HERO
+    =========================== -->
+
+    <section class="reviews-hero">
+
+        <div class="reviews-hero-content">
+
+            <p class="reviews-eyebrow">
+                ✦ WORDS FROM OUR COMMUNITY
+            </p>
+
+            <h1>
+                Every Cup Has<br>
+                <span>a Story.</span>
+            </h1>
+
+            <p>
+                Good coffee tastes even better when
+                shared with good people. Discover
+                what our community loves about
+                Brew & Bean.
+            </p>
+
+            <a href="#write-review" class="reviews-primary-btn">
+                Share Your Experience →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+         RATING SUMMARY
+    =========================== -->
+
+    <section class="reviews-summary">
+
+        <div class="reviews-summary-container">
+
+            <div class="reviews-summary-main">
+
+                <p class="reviews-eyebrow">
+                    COMMUNITY LOVE
+                </p>
+
+                <h2>Made Better by You</h2>
+
+                <p>
+                    Your kind words and honest feedback
+                    inspire every cup we make.
+                </p>
+
+            </div>
+
+            <div class="reviews-rating-box">
+
+                <strong id="averageRating">5.0</strong>
+
+                <div class="reviews-summary-stars"
+                     id="averageStars"
+                     aria-label="Average rating">
+                    ★★★★★
+                </div>
+
+                <p>
+                    Based on
+                    <span id="reviewCount">0</span>
+                    demo reviews
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+         CUSTOMER REVIEWS
+    =========================== -->
+
+    <section class="reviews-section" id="customer-reviews">
+
+        <div class="reviews-section-heading">
+
+            <p class="reviews-eyebrow">
+                KIND WORDS, WARM MOMENTS
+            </p>
+
+            <h2>What Our Guests Are Saying</h2>
+
+            <p>
+                A few sample stories from coffee lovers.
+                Add your own review below!
+            </p>
+
+        </div>
+
+
+        <div class="reviews-grid" id="reviewsGrid">
+
+            <!-- Reviews are inserted using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+         WRITE A REVIEW
+    =========================== -->
+
+    <section class="reviews-form-section" id="write-review">
+
+        <div class="reviews-form-container">
+
+            <div class="reviews-form-intro">
+
+                <p class="reviews-eyebrow">
+                    WE'D LOVE TO HEAR FROM YOU
+                </p>
+
+                <h2>
+                    Share Your<br>
+                    Coffee Moment.
+                </h2>
+
+                <p>
+                    Tried something delicious?
+                    Loved the cozy atmosphere?
+                    Tell us about your experience!
+                </p>
+
+                <div class="reviews-form-note">
+
+                    <span>☕</span>
+
+                    <p>
+                        Every review helps us make
+                        your next visit even sweeter.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="reviews-form-card">
+
+                <h3>Write a Review</h3>
+
+                <p>
+                    Your feedback means a latte to us!
+                </p>
+
+                <form id="reviewForm">
+
+                    <div class="reviews-field">
+
+                        <label for="reviewName">
+                            Your Name
+                        </label>
+
+                        <input type="text"
+                               id="reviewName"
+                               name="name"
+                               placeholder="Enter your name"
+                               maxlength="50"
+                               required>
+
+                    </div>
+
+
+                    <div class="reviews-field">
+
+                        <label>
+                            Your Rating
+                        </label>
+
+                        <div class="reviews-star-picker"
+                             id="starPicker"
+                             role="group"
+                             aria-label="Choose your rating">
+
+                            <button type="button"
+                                    data-rating="1"
+                                    aria-label="1 star">★</button>
+
+                            <button type="button"
+                                    data-rating="2"
+                                    aria-label="2 stars">★</button>
+
+                            <button type="button"
+                                    data-rating="3"
+                                    aria-label="3 stars">★</button>
+
+                            <button type="button"
+                                    data-rating="4"
+                                    aria-label="4 stars">★</button>
+
+                            <button type="button"
+                                    data-rating="5"
+                                    aria-label="5 stars">★</button>
+
+                        </div>
+
+                        <p class="reviews-rating-hint"
+                           id="ratingHint">
+                            Choose your rating
+                        </p>
+
+                    </div>
+
+
+                    <div class="reviews-field">
+
+                        <label for="reviewMessage">
+                            Your Review
+                        </label>
+
+                        <textarea id="reviewMessage"
+                                  name="message"
+                                  rows="5"
+                                  maxlength="500"
+                                  placeholder="Tell us about your experience..."
+                                  required></textarea>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="reviews-submit-btn">
+                        Post My Review →
+                    </button>
+
+                    <p class="reviews-feedback"
+                       id="reviewFeedback"
+                       role="status"
+                       aria-live="polite"></p>
+
+                    <p class="reviews-demo-note">
+                        Demo only: your review is saved
+                        in this browser, not sent to a server.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===========================
+         FINAL CTA
+    =========================== -->
+
+    <section class="reviews-final">
+
+        <div class="reviews-final-content">
+
+            <p class="reviews-eyebrow">
+                COME MAKE A MEMORY
+            </p>
+
+            <h2>
+                Your Next Favorite<br>
+                Moment Awaits.
+            </h2>
+
+            <p>
+                Great coffee, cozy corners,
+                and moments worth sharing.
+                We can't wait to welcome you.
+            </p>
+
+            <div class="reviews-final-buttons">
+
+                <a href="menu.html" class="reviews-primary-btn">
+                    Explore Our Menu →
+                </a>
+
+                <a href="contact.html" class="reviews-outline-btn">
+                    Visit Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ===========================
+     FOOTER
+=========================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+
+            <h2>☕ BREW & BEAN</h2>
+
+            <p>
+                Your cozy neighborhood cafe.
+                Handcrafted coffee, sweet treats,
+                and good moments.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">Our Story</a>
+            <a href="menu.html">Our Menu</a>
+            <a href="offers.html">Special Offers</a>
+            <a href="coffee-guide.html">Coffee Guide</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="rewards.html">Rewards</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Explore Our Menu</h3>
+
+            <a href="menu.html#hot">Hot Coffee</a>
+            <a href="menu.html#iced">Iced Coffee</a>
+            <a href="menu.html#matcha">Matcha & Specialty</a>
+            <a href="menu.html#desserts">Desserts & Bakery</a>
+            <a href="menu.html#bites">Breakfast & Bites</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Visit Us</h3>
+
+            <p>Hebron, Palestine</p>
+
+            <p>
+                Email:
+                <a href="mailto:hello@brewandbean.example">
+                    hello@brewandbean.example
+                </a>
+            </p>
+
+            <a href="contact.html">
+                Get in Touch →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Brew & Bean.
+            All rights reserved.
+        </p>
+
+        <p>Made with love and coffee ☕</p>
+
+    </div>
+
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
