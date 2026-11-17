@@ -3769,3 +3769,22 @@ img {
 .rewards-step-card:active {
     transform: translateY(-5px);
 }
+
+/* =====================================
+   HOME - CUSTOMER FAVORITES HOVER
+===================================== */
+
+.drink-card {
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.drink-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(48, 32, 26, 0.18);
+}
+
+.drink-card:active {
+    transform: translateY(-5px);
+}
+
